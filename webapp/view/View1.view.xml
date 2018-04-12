@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" xmlns:m="sap.m" displayBlock="true">
 	<m:App id="idAppControl">
 		<m:pages>
-			<m:Page title="test" showHeader="false" class="sapUiSizeCompact" binding="{GETPLANT>/S_T001WSet(Type='02')}">
+			<m:Page title="test2" showHeader="false" class="sapUiSizeCompact" binding="{GETPLANT>/S_T001WSet(Type='02')}">
 				<m:content>
 					<m:Text id="Tror"/>
 					<c:Icon src="sap-icon://home" size="2em"/>
