@@ -1,0 +1,99 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" controllerName="z.ZBOXDISPATCH.controller.View1" xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" xmlns:m="sap.m" displayBlock="true">
+	<m:App id="idAppControl">
+		<m:pages>
+			<m:Page title="test" showHeader="false" class="sapUiSizeCompact" binding="{GETPLANT>/S_T001WSet(Type='02')}">
+				<m:content>
+					<m:Text id="Tror"/>
+					<c:Icon src="sap-icon://home" size="2em"/>
+					<m:Label design="Bold" text="{GETPLANT>EPlant} {GETPLANT>ET001w/Name1}"/>
+					<m:HBox width="100%" id="TITLE" alignContent="Start" alignItems="Center">
+						<m:items>
+							<m:HBox width="2%" alignContent="Start" alignItems="Center"></m:HBox>
+							<c:Icon src="sap-icon://open-folder" size="2em"/>
+							<m:HBox width="1%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Label text="Open Box to dispatch" width="100%" design="Bold"/>
+						</m:items>
+					</m:HBox>
+					<m:VBox width="100%" height="2%" alignContent="Start" visible="true"></m:VBox>
+					<m:HBox width="100%" id="H_BOX" alignContent="Start" alignItems="Center" visible="true">
+						<m:items>
+							<m:Label text="Box" width="100%" id="__label_box" design="Bold" textAlign="Center"/>
+							<m:HBox width="2%" id="S" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:SearchField width="80%" id="BOX" placeholder="" search="CheckBoxRec"/>
+							<m:Button text="Finish the Box" icon="sap-icon://accept" id="Finish" tooltip="Recept selected items" press="FinishBox" type="Emphasized"
+								visible="false"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="Article" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Mat " width="100%" id="__label0_copy" design="Bold" textAlign="Center"/>
+							<m:HBox width="2.2%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:SearchField width="80%" id="SearchArt" placeholder="" search="searchArt"/>
+							<m:Label text="Defect :" width="100%" design="Bold" textAlign="Center"/>
+							<m:Switch id="Defect" state="false" customTextOn="On" customTextOff="Off">
+								<m:layoutData>
+									<m:FlexItemData growFactor="1"/>
+								</m:layoutData>
+							</m:Switch>
+						</m:items>
+					</m:HBox>
+					<m:VBox width="100%" height="2%" id="SPACE" alignContent="Start" visible="true"></m:VBox>
+					<m:HBox width="100%" id="H_DESCR" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Description" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="1%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__desc"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_STATUS" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Status" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="3.7%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__status"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_QTY" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Quantity" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="2.6%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__qty"/>
+							<m:HBox width="0.5%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="EA"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_DEST" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Dest.Bin" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="2.6%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__dest"/>
+							<m:HBox width="2.6%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__destbin"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_CONF" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Conf.Bin" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="2.3%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:SearchField width="100%" id="BIN_INPUT" placeholder="" search="searchBin"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_STORE" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Store" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="4%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text text="" id="__store"/>
+						</m:items>
+					</m:HBox>
+					<m:HBox width="100%" id="H_WEIGHT" alignContent="Start" alignItems="Center" visible="false">
+						<m:items>
+							<m:Label text="Weight" width="100%" design="Bold" textAlign="Center"/>
+							<m:HBox width="3.1%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:Text id="__weight"/>
+						</m:items>
+					</m:HBox>
+				</m:content>
+			</m:Page>
+		</m:pages>
+	</m:App>
+</mvc:View>
