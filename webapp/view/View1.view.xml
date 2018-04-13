@@ -2,24 +2,24 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns:c="sap.ui.core" xmlns:m="sap.m" displayBlock="true">
 	<m:App id="idAppControl">
 		<m:pages>
-			<m:Page title="test2" showHeader="false" class="sapUiSizeCompact" binding="{GETPLANT>/S_T001WSet(Type='02')}">
+			<m:Page title="test" showHeader="false" class="sapUiSizeCompact" binding="{GETPLANT>/S_T001WSet(Type='02')}" id="_page0">
 				<m:content>
-					<m:Text id="Tror"/>
-					<c:Icon src="sap-icon://home" size="2em"/>
-					<m:Label design="Bold" text="{GETPLANT>EPlant} {GETPLANT>ET001w/Name1}"/>
+					<m:HBox><m:Text id="Tror"/></m:HBox>
+					<c:Icon src="sap-icon://home" size="2em" id="_icon0"/>
+					<m:Label design="Bold" text="{GETPLANT>EPlant} {GETPLANT>ET001w/Name1}" id="_label0"/>
 					<m:HBox width="100%" id="TITLE" alignContent="Start" alignItems="Center">
 						<m:items>
-							<m:HBox width="2%" alignContent="Start" alignItems="Center"></m:HBox>
-							<c:Icon src="sap-icon://open-folder" size="2em"/>
-							<m:HBox width="1%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:HBox width="2%" alignContent="Start" alignItems="Center" id="_hbox0"></m:HBox>
+							<c:Icon src="sap-icon://open-folder" size="2em" id="_icon1"/>
+							<m:HBox width="1%" alignContent="Start" alignItems="Center" id="_hbox1"></m:HBox>
 							<m:Label text="Open Box to dispatch" width="100%" design="Bold"/>
 						</m:items>
 					</m:HBox>
-					<m:VBox width="100%" height="2%" alignContent="Start" visible="true"></m:VBox>
+					<m:VBox width="100%" height="2%" alignContent="Start" visible="true" id="_vbox0"></m:VBox>
 					<m:HBox width="100%" id="H_BOX" alignContent="Start" alignItems="Center" visible="true">
 						<m:items>
 							<m:Label text="Box" width="100%" id="__label_box" design="Bold" textAlign="Center"/>
-							<m:HBox width="2%" id="S" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:HBox width="2%" id="S" alignContent="Start" alignItems="Center"/>
 							<m:SearchField width="80%" id="BOX" placeholder="" search="CheckBoxRec"/>
 							<m:Button text="Finish the Box" icon="sap-icon://accept" id="Finish" tooltip="Recept selected items" press="FinishBox" type="Emphasized"
 								visible="false"/>
@@ -28,7 +28,7 @@
 					<m:HBox width="100%" id="Article" alignContent="Start" alignItems="Center" visible="false">
 						<m:items>
 							<m:Label text="Mat " width="100%" id="__label0_copy" design="Bold" textAlign="Center"/>
-							<m:HBox width="2.2%" alignContent="Start" alignItems="Center"></m:HBox>
+							<m:HBox width="2.2%" alignContent="Start" alignItems="Center"/>
 							<m:SearchField width="80%" id="SearchArt" placeholder="" search="searchArt"/>
 							<m:Label text="Defect :" width="100%" design="Bold" textAlign="Center"/>
 							<m:Switch id="Defect" state="false" customTextOn="On" customTextOff="Off">
