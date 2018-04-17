@@ -149,7 +149,7 @@ sap.ui.define([
 				oData.read(URL, null, null, true, function(response) {
 					BusyIndicator.hide();
 					if (response.E_MESSAGE !== "" && response.E_ZTYPE === "E") {
-						oController.getView().byId("CAGE").setValue("");
+						oController.getView().byId("SearchArt").setValue("");
 						MessageBox.show(response.E_MESSAGE, MessageBox.Icon.ERROR);
 					} else {
 						if (swit === false && response.Nltyp !== "R") {
