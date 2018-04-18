@@ -107,26 +107,30 @@ sap.ui.define([
 			},
 
 			searchArt: function(oEvent) {
-				var oController = this;
-				var material = this.getView().byId("SearchArt").getValue();
-				//var box = this.getView().byId("BOX").getValue();
-				var oData = new ODataModel("/sap/opu/odata/sap/ZCHECK_VALUE_SCAN_SRV/", true);
-				var URL = "/MessageSet(PValue='11" + material + "')";
-				BusyIndicator.show();
-				oData.read(URL, null, null, true, function(response) {
-					BusyIndicator.hide();
-					if (response.EMessage !== "" && response.EZtype === "E") {
-						oController.getView().byId("SearchArt").setValue("");
-						MessageBox.show(response.EMessage, MessageBox.Icon.ERROR);
-					} else {
-						oController.traiteart();
-					}
-				}, function(error) {
-					BusyIndicator.hide();
-					MessageBox.error(JSON.parse(error.response.body).error.message.value, {
-						title: "Error"
+				if (oEvent.getParameter("clearButtonPressed") === true) {
+					this.getView().byId("SearchArt").setValue("");
+				} else {
+					var oController = this;
+					var material = this.getView().byId("SearchArt").getValue();
+					//var box = this.getView().byId("BOX").getValue();
+					var oData = new ODataModel("/sap/opu/odata/sap/ZCHECK_VALUE_SCAN_SRV/", true);
+					var URL = "/MessageSet(PValue='11" + material + "')";
+					BusyIndicator.show();
+					oData.read(URL, null, null, true, function(response) {
+						BusyIndicator.hide();
+						if (response.EMessage !== "" && response.EZtype === "E") {
+							oController.getView().byId("SearchArt").setValue("");
+							MessageBox.show(response.EMessage, MessageBox.Icon.ERROR);
+						} else {
+							oController.traiteart();
+						}
+					}, function(error) {
+						BusyIndicator.hide();
+						MessageBox.error(JSON.parse(error.response.body).error.message.value, {
+							title: "Error"
+						});
 					});
-				});
+				}
 			},
 
 			traiteart: function(oEvent) {
