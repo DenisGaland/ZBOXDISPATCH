@@ -11,7 +11,7 @@ sap.ui.define([
 			onInit: function() {
 				var oView = this.getView();
 				jQuery.sap.delayedCall(500, this, function() {
-					oView.byId("SearchArt").focus();
+					oView.byId("BOX").focus();
 				});
 				/*				var oView = this.getView();
 								var osite = oView.byId("__PLANT");
@@ -242,6 +242,9 @@ sap.ui.define([
 							oController.getView().byId("SearchArt").setValue("");
 							oController.getView().byId("BIN_INPUT").setValue("");
 							oController.getView().byId("Finish").setVisible(true);
+							jQuery.sap.delayedCall(500, this, function() {
+								oController.getView().byId("SearchArt").focus();
+							});
 						}
 					}, function(error) {
 						BusyIndicator.hide();
